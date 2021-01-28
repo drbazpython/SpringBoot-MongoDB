@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Bank List</title>
+</head>
+<body>
+    <h4>Welcome to Thymeleaf Demo in Springboot</h4>
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Account Number</th>
+            <th>Trust</th>
+            <th>Transaction fee</th>
+        </tr>
+        </thead>
+        <tr th:each="bank : ${banks}">
+            <td th:text="${bank.id}"></td>
+            <td th:text="${bank.accountNumber}"></td>
+            <td th:text="${bank.trust}"></td>
+            <td th:text="${bank.transactionFee}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>
